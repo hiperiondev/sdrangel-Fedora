@@ -1,11 +1,11 @@
-Name:           libmirisdr-4
+Name:           libmirisdr4
 Version:        1.1.2
 Release:        1%{?dist}
 Summary:        Support programs for MRi2500
 License:        GPL-2.0
 Group:          Productivity/Hamradio/Other
 Url:            https://github.com/f4exb/libmirisdr-4
-Source:         https://github.com/f4exb/libmirisdr-4/archive/%{version}/%{name}-%{version}.tar.gz
+Source:         https://github.com/f4exb/libmirisdr-4/archive/%{version}/libmirisdr-4-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig
