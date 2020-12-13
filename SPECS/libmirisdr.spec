@@ -1,4 +1,4 @@
-Name:           libmirisdr4
+Name:           libmirisdr
 Version:        1.1.2
 Release:        1%{?dist}
 Summary:        Support programs for MRi2500
