@@ -93,5 +93,5 @@ getent group airspyhf_group >/dev/null || groupadd -r airspyhf_group
 %doc README.md
 
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 1.6.8-1
 - First Fedora spec
