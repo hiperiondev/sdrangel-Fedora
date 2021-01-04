@@ -37,6 +37,12 @@ Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 %description devel
 Library headers for Airspy HF+ driver.
 
+%package doc
+Summary:        Documentation for Airspy HF+
+
+%description doc
+Documentation for Airspy HF+ driver.
+
 %prep
 %autosetup
 
@@ -72,7 +78,7 @@ getent group airspyhf_group >/dev/null || groupadd -r airspyhf_group
 %{_bindir}/airspyhf_rx
 
 %files libs
-%doc README.md LICENSE
+%license LICENSE
 %{_libdir}/libairspyhf.so.*
 
 %files udev
@@ -82,6 +88,9 @@ getent group airspyhf_group >/dev/null || groupadd -r airspyhf_group
 %{_libdir}/libairspyhf.so
 %{_includedir}/libairspyhf
 %{_libdir}/pkgconfig/libairspyhf.pc
+
+%files doc
+%doc README.md
 
 %changelog
 * Wed Dec 09 2020 lu3vea@gmail.com
