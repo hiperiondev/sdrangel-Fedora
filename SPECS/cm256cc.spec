@@ -29,6 +29,12 @@ generates redundant data that can be used to recover the originals.
 This subpackage contains libraries and header files for developing
 applications that want to make use of libcm256cc.
 
+%package doc
+Summary:        Documentation for cm256cc
+
+%description doc
+Documentation for cm256cc
+
 %prep
 %autosetup
 
@@ -40,7 +46,6 @@ applications that want to make use of libcm256cc.
 %cmake_install
 
 %files
-%doc README.md
 %{_bindir}/cm256_rx
 %{_bindir}/cm256_test
 %{_bindir}/cm256_tx
@@ -51,6 +56,9 @@ applications that want to make use of libcm256cc.
 %{_libdir}/libcm256cc.so
 %{_libdir}/pkgconfig/libcm256cc.pc
 
+%files doc
+%doc README.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 1.0.5-1
 - First Fedora spec

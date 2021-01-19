@@ -49,6 +49,12 @@ BuildArch:      noarch
 %description usb-udev
 Udev rules for XTRX USB devices.
 
+%package doc
+Summary:        Documentation for XTRX USB devices
+
+%description doc
+Documentation for XTRX USB devices
+
 %prep
 %setup -q
 %patch0 -p1
@@ -80,7 +86,6 @@ getent group %{xtrx_group} >/dev/null || groupadd -r %{xtrx_group}
 
 %files
 %license LICENSE
-%doc README.md
 %{_libdir}/libxtrxll.so*
 
 %files devel
@@ -95,6 +100,9 @@ getent group %{xtrx_group} >/dev/null || groupadd -r %{xtrx_group}
 %files usb-udev
 /etc/udev/rules.d/*.rules
 
+%files doc
+%doc README.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 0-0.221202git1b6eddfbed
 - First Fedora spec

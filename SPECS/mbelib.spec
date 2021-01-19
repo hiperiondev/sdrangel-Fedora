@@ -24,6 +24,12 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %description devel
 Development files for mbelib
 
+%package doc
+Summary:        Documentation for mbelib
+
+%description doc
+Documentation for mbelib
+
 %global debug_package %{nil}
 
 %prep
@@ -46,7 +52,6 @@ mv %{buildroot}/usr/lib %{buildroot}/usr/lib64
 rm -rf $RPM_BUILD_ROOT/
 
 %files
-%doc README.md COPYRIGHT CHANGELOG
 %{_libdir}/libmbe.so
 %{_libdir}/libmbe.a
 %{_libdir}/libmbe.so*
@@ -54,7 +59,10 @@ rm -rf $RPM_BUILD_ROOT/
 %files devel
 %{_includedir}/mbelib.h
 
+%files doc
+%doc README.md COPYRIGHT CHANGELOG
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 1.3.0-1
 - First Fedora spec
 

@@ -57,6 +57,12 @@ Group:          System/Libraries
 Soapy LMS7 - LimeSDR device support for Soapy SDR.
 A Soapy module that supports LimeSDR devices within the Soapy API.
 
+%package doc
+Summary:        Documentation for LimeSuite
+
+%description doc
+Documentation for LimeSuite
+
 %prep
 %autosetup
 
@@ -87,7 +93,6 @@ sed -i 's|MODE="660"|MODE="666"|g' udev-rules/64-limesuite.rules
 
 %files
 %license COPYING
-%doc Changelog.txt README.md
 %{_bindir}/LimeUtil
 %{_bindir}/LimeSuiteGUI
 %{_bindir}/LimeQuickTest
@@ -111,6 +116,9 @@ sed -i 's|MODE="660"|MODE="666"|g' udev-rules/64-limesuite.rules
 %dir %{_libdir}/SoapySDR/modules0.7
 %{_libdir}/SoapySDR/modules0.7/libLMS7Support.so
 
+%files doc
+%doc Changelog.txt README.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 20.10.0-1
 - First Fedora spec

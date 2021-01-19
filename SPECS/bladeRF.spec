@@ -119,5 +119,5 @@ mv %{buildroot}/lib %{buildroot}/lib64
 %{_libdir}/pkgconfig/libbladeRF.pc
 
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 2019.07-1
 - First Fedora spec

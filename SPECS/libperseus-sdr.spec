@@ -46,6 +46,12 @@ Group:          Hardware/Other
 %description udev
 Udev rules for Perseus SDR hardware
 
+%package doc
+Summary:        Documentation for Perseus SDR
+
+%description doc
+Documentation for Perseus SDR
+
 %prep
 %autosetup
 #
@@ -68,7 +74,6 @@ rm %{buildroot}/%{_bindir}/*
 getent group %{perseussdr_group} >/dev/null || groupadd -r %{perseussdr_group}
 
 %files
-%doc AUTHORS README.md
 %license COPYING.LESSER
 %{_libdir}/libperseus-sdr.so*
 %{_libdir}/pkgconfig/libperseus-sdr.pc
@@ -87,6 +92,9 @@ getent group %{perseussdr_group} >/dev/null || groupadd -r %{perseussdr_group}
 %{_includedir}/config.h
 %{_includedir}/fpga_data.h
 
+%files doc
+%doc AUTHORS README.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 0.8.2-1
 - First Fedora spec

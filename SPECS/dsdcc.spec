@@ -43,6 +43,12 @@ It decodes DMR, dPMR, D-Star and Yaesu System Fusion (YSF) standards.
 This subpackage contains libraries and header files for developing
 applications that want to make use of libdsdcc.
 
+%package doc
+Summary:        Documentation for DSDcc
+
+%description doc
+Documentation for DSDcc
+
 %prep
 %autosetup
 
@@ -56,7 +62,6 @@ applications that want to make use of libdsdcc.
 %cmake_install
 
 %files
-%doc messagefile.md Readme.md
 %{_bindir}/dsdccx*
 
 %files libs
@@ -67,6 +72,9 @@ applications that want to make use of libdsdcc.
 %{_libdir}/libdsdcc.so
 %{_libdir}/pkgconfig/libdsdcc.pc
 
+%files doc
+%doc *.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 1.9.0-1
 - First Fedora spec

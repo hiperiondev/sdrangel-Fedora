@@ -15,6 +15,12 @@ BuildRequires:  pkgconfig(SoapySDR)
 %description
 A Soapy module that supports remote devices within the Soapy API.
 
+%package doc
+Summary:        Documentation for SoapyRemote
+
+%description doc
+Documentation for SoapyRemote
+
 %prep
 %autosetup
 
@@ -30,13 +36,15 @@ rm %{buildroot}//usr/lib/systemd/system/SoapySDRServer.service
 
 %files
 %license LICENSE_1_0.txt
-%doc Changelog.txt README.md
 %{_bindir}/SoapySDRServer
 %{_mandir}/man1/SoapySDRServer.1.gz
 %dir %{_libdir}/SoapySDR/
 %dir %{_libdir}/SoapySDR/modules0.7
 %{_libdir}/SoapySDR/modules0.7/libremoteSupport.so
 
+%files doc
+%doc Changelog.txt README.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 0.5.2-1
 - First Fedora spec

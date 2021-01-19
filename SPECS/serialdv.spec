@@ -26,6 +26,12 @@ AMBE3000 based devices in packet mode over a serial link.
 This subpackage contains libraries and header files for developing
 applications that want to make use of libserialdv.
 
+%package doc
+Summary:        Documentation for AMBE3000 based devices
+
+%description doc
+Documentation for AMBE3000 based devices
+
 %prep
 %autosetup
 
@@ -38,7 +44,6 @@ applications that want to make use of libserialdv.
 
 %files
 %license LICENSE
-%doc Readme.md
 %{_libdir}/libserialdv.so*
 
 %files devel
@@ -46,7 +51,10 @@ applications that want to make use of libserialdv.
 %{_includedir}/serialdv/
 %{_libdir}/libserialdv.so
 
+%files doc
+%doc Readme.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 1.1.4-1
 - First Fedora spec
 

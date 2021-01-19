@@ -36,6 +36,13 @@ BuildArch:      noarch
 %description devel-examples
 Example code for Codec 2
 
+%package doc
+Summary:        Documentation for Codec 2.
+
+%description doc
+Documentation for Codec 2.
+
+
 %prep
 %autosetup
 
@@ -91,7 +98,10 @@ EOF
 %{_libdir}/libcodec2.so
 %{_libdir}/pkgconfig/%{name}.pc
 
+%files doc
+%doc README*
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 0.9.2-1
 - First Fedora spec
 

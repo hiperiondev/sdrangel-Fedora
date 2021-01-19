@@ -31,6 +31,12 @@ Group:          Hardware/Other
 %description udev
 Udev rules for Mirics MRi2500 based DVB dongles.
 
+%package doc
+Summary:        Documentation for Mirics MRi2500 based DVB dongles
+
+%description doc
+Documentation for Mirics MRi2500 based DVB dongles
+
 %prep
 %setup -q
 
@@ -56,7 +62,6 @@ install -D -p -m 0644 mirisdr.rules %{buildroot}%{_udevrulesdir}/10-mirisdr.rule
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS COPYING README
 %{_libdir}/libmirisdr.so*
 %{_bindir}/miri_fm
 %{_bindir}/miri_sdr
@@ -72,6 +77,9 @@ install -D -p -m 0644 mirisdr.rules %{buildroot}%{_udevrulesdir}/10-mirisdr.rule
 %{_includedir}/mirisdr_export.h
 %{_libdir}/pkgconfig/libmirisdr.pc
 
+%files doc
+%doc AUTHORS COPYING README
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 1.1.2-1
 - First Fedora spec

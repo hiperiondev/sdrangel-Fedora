@@ -29,6 +29,12 @@ USB3380 abstraction layer for libusb.
 This subpackage contains libraries and header files for developing
 applications that want to make use of libusb3380.
 
+%package doc
+Summary:        Documentation for libusb3380
+
+%description doc
+Documentation for libusb3380
+
 %prep
 %setup -q
 #%patch0 -p1
@@ -43,7 +49,6 @@ applications that want to make use of libusb3380.
 
 %files
 %license LICENSE
-%doc README.md
 %{_libdir}/libusb3380.so*
 
 %files devel
@@ -51,6 +56,9 @@ applications that want to make use of libusb3380.
 %{_libdir}/libusb3380.so
 %{_libdir}/pkgconfig/libusb3380.pc
 
+%files doc
+%doc README.md
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 0-0.20190125gitc83d1e93eb
 - First Fedora spec

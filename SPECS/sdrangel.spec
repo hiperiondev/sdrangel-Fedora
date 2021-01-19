@@ -8,7 +8,7 @@
 %endif
 %bcond_without freedv
 Name:           sdrangel
-Version:        6.3.2
+Version:        6.5.0
 Release:        1%{?dist}
 Summary:        SDR/Analyzer frontend for Airspy, BladeRF, HackRF, RTL-SDR and FunCube
 License:        GPL-3.0-or-later
@@ -67,6 +67,12 @@ BuildRequires:  pkgconfig(codec2)
 SDRangel is an Open Source Qt5/OpenGL SDR and signal analyzer frontend
 to various hardware.
 
+%package doc
+Summary:        Documentation for SDRangel
+
+%description doc
+Documentation for SDRangel
+
 %prep
 %autosetup
 sed -i 's/\r$//' Readme.md
@@ -89,8 +95,6 @@ rm -f %{buildroot}%{_datadir}/sdrangel/Readme.md
 
 %files
 %license LICENSE
-%doc Readme.md
-%doc swagger/sdrangel/examples/
 %{_bindir}/sdrangel
 %{_bindir}/sdrangelbench
 %{_bindir}/sdrangelsrv
@@ -101,6 +105,10 @@ rm -f %{buildroot}%{_datadir}/sdrangel/Readme.md
 %{_datadir}/applications/sdrangel.desktop
 %{_datadir}/icons/hicolor/scalable/apps/sdrangel_icon.svg
 
+%files doc
+%doc Readme.md
+%doc swagger/sdrangel/examples/
+
 %changelog
-* Wed Dec 09 2020 lu3vea@gmail.com
+* Wed Dec 09 2020 lu3vea@gmail.com - 6.5.0-1
 - First Fedora spec
