@@ -40,7 +40,7 @@ Documentation for cm256cc
 
 %build
 %cmake
-%make_build
+%cmake_build
 
 %install
 %cmake_install
