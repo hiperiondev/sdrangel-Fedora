@@ -56,7 +56,7 @@ rm -rf build_linux && mkdir build_linux && pushd build_linux
 
 %install
 pushd build_linux
-%make_install
+%cmake_install
 popd
 
 # Create and install pkgconfig file
